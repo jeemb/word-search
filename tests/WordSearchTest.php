@@ -13,7 +13,7 @@
             $phrase = "is";
 
             //Act
-            $result = $test_Search->occurence($word, $phrase);
+            $result = $test_Search->occurrence($word, $phrase);
 
             //Assert
             $this->assertEquals(1, $result);
