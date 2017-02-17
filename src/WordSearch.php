@@ -1,12 +1,15 @@
 <?php
     class Search
     {
-        function occurence($word, $phrase)
+        function occurrence($word, $phrase)
         {
         $result;
-
+        $number = substr_count($phrase, $word);
+        $result = $number;
+        return $result;
 
     }
+}
 
 
 
