@@ -2,10 +2,10 @@
 
     require_once "src/WordSearch.php";
 
-    class SearchTest extends PHPUnit_Framework_TestCase
+    class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_occurrence_singleWord()
+        function test_countRepeats_singleWord()
         {
             //Arrange
             $test_Search = new Search;
@@ -19,7 +19,7 @@
             $this->assertEquals(1, $result);
         }
 
-        function test_occurrence_multipleWords()
+        function test_countRepeats_multipleWords()
         {
             //Arrange
             $test_Search = new Search;
@@ -33,7 +33,7 @@
             $this->assertEquals(1, $result);
         }
 
-        function test_occurrence_fullWords()
+        function test_countRepeats_fullWords()
         {
             //Arrange
             $test_Search = new Search;
@@ -47,7 +47,7 @@
             $this->assertEquals(1, $result);
         }
 
-        function test_occurrence_caseSensitive()
+        function test_countRepeats_caseSensitive()
         {
             //Arrange
             $test_Search = new Search;
@@ -59,6 +59,20 @@
 
             //Assert
             $this->assertEquals(1, $result);
+        }
+
+        function test_countRepeats_zeroResult()
+        {
+            //Arrange
+            $test_Search = new Search;
+            $word = "is";
+            $phrase = "zero";
+
+            //Act
+            $result = $test_Search->occurrence($word, $phrase);
+
+            //Assert
+            $this->assertEquals(0, $result);
         }
 
     }

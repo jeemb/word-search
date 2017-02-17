@@ -1,0 +1,21 @@
+body {
+    background-image: url("/img-noise.png");
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    padding-top: 50px;
+}
+
+p {
+    text-align: center;
+}

@@ -8,7 +8,7 @@
 
 This program searches a user-inputted phrase for a user-inputted word and publishes the number of full-word occurrences.
 
-# _Application Specifications_
+# Application Specifications
 
 |Behavior|Input|Output|
 |--------|-----|------|
@@ -16,6 +16,7 @@ This program searches a user-inputted phrase for a user-inputted word and publis
 |App will search if user-inputted word exists in multiple word string | word: “is” phrase: “substr_count is a pretty cool function” | 1 |
 |App will only match full words (no partial matches)|word: “is” phrase: “this is a pretty great function” |1|
 |App will search string for word regardless of capitalization |word: “IS” phrase: “this is a pretty cool function”|1|
+|App publishes a value of "0" if no matches exist|word: "is" phrase: "zero"|0|
 
 ## Setup/Installation Requirements
 
@@ -38,6 +39,7 @@ Feel free to contact me at: jenniferbeem@gmail.com if any questions come up!
 
 * PHP/Silex
 * HTML/Twig
+* PHPUnit for testing
 * CSS/Bootstrap
 
 ### License

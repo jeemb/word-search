@@ -2,19 +2,24 @@
 <html>
     <head>
         <title>Input</title>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     </head>
     <body>
-        <h1>Enter a phrase along with a word you want to search for in that phrase (Inception-like). This program will tell you how many full-word matches it finds.</h1>
+        <div class="container">
+            <h1>Word Searcher</h1>
+            <h3>Enter a phrase along with a word you want to search for in that phrase (Inception-like). This program will tell you how many full-word matches it finds.</h1>
 
-        <form action="/results" method="post">
-            <label for="word">Input word</label>
-            <input type="text" name="word">
+            <form action="/results" method="post">
+                <label for="word">Input word</label>
+                <input type="text" name="word">
 
-            <label for="phrase">Input phrase</label>
-            <input type="text" name="phrase">
+                <label for="phrase">Input phrase</label>
+                <input type="text" name="phrase">
 
-            <button type="submit">Submit</button>
-        </form>
-
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </body>
 </html>

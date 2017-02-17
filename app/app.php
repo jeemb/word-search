@@ -23,15 +23,15 @@
 
     $app->get("/", function() use($app) {
 
-        return $app['twig']->render('input.html.twig', array('searches' => Search::getAll()));
+        return $app['twig']->render('input.html.twig', array('searches' => RepeatCounter::getAll()));
     });
 
     $app->post("/results", function() use($app) {
         $word_input = $_POST['word'];
         $phrase_input = $_POST['phrase'];
-        $new_search = new Search($word_input, $phrase_input);
-        $result = $new_search->occurrence($word_input, $phrase_input);
-        $new_search->save();
+        $new_repeat_counter = new RepeatCounter($word_input, $phrase_input);
+        $result = $new_repeat_counter->countRepeats($word_input, $phrase_input);
+        $new_repeat_counter->save();
 
         return $app['twig']->render('results.html.twig', array('result' => $result));
     });

@@ -1,7 +1,7 @@
 <?php
-    class Search
+    class RepeatCounter
     {
-        function occurrence($word, $phrase)
+        function countRepeats($word, $phrase)
         {
         $result;
         $word = strtolower($word);
@@ -13,11 +13,15 @@
                 array_push($matching_words, $word);
             }
         }
-        $count_array = array_count_values($matching_words);
-        $number_of_matches = $count_array[$word];
-        $result = $number_of_matches;
+        if (empty($matching_words)) {
+            $result = 0;
+        }
+        else {
+            $count_array = array_count_values($matching_words);
+            $number_of_matches = $count_array[$word];
+            $result = $number_of_matches;
+        }
         return $result;
-
     }
 
     function save()
