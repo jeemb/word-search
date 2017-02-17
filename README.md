@@ -8,7 +8,7 @@
 
 This program searches a user-inputted phrase for a user-inputted word and publishes the number of full-word occurrences.
 
-# Application Specifications
+### Application Specifications
 
 |Behavior|Input|Output|
 |--------|-----|------|
