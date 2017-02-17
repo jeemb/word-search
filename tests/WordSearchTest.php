@@ -32,6 +32,21 @@
             //Assert
             $this->assertEquals(1, $result);
         }
+
+        function test_occurrence_fullWords()
+        {
+            //Arrange
+            $test_Search = new Search;
+            $word = "is";
+            $phrase = "this is a pretty great function";
+
+            //Act
+            $result = $test_Search->occurrence($word, $phrase);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
     }
 
 
