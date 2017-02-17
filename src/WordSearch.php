@@ -4,6 +4,8 @@
         function occurrence($word, $phrase)
         {
         $result;
+        $word = strtolower($word);
+        $phrase = strtolower($phrase);
         $matching_words = array();
         $full_words = explode(" ", $phrase);
         foreach ($full_words as $singleword) {
