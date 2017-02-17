@@ -29,9 +29,9 @@
     $app->post("/results", function() use($app) {
         $word_input = $_POST['word'];
         $phrase_input = $_POST['phrase'];
-        $new_repeat_counter = new RepeatCounter($word_input, $phrase_input);
-        $result = $new_repeat_counter->countRepeats($word_input, $phrase_input);
-        $new_repeat_counter->save();
+        $new_repeatCounter = new RepeatCounter($word_input, $phrase_input);
+        $result = $new_repeatCounter->countRepeats($word_input, $phrase_input);
+        $new_repeatCounter->save();
 
         return $app['twig']->render('results.html.twig', array('result' => $result));
     });
