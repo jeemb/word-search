@@ -47,6 +47,20 @@
             $this->assertEquals(1, $result);
         }
 
+        function test_occurrence_caseSensitive()
+        {
+            //Arrange
+            $test_Search = new Search;
+            $word = "IS";
+            $phrase = "this is a pretty cool function";
+
+            //Act
+            $result = $test_Search->occurrence($word, $phrase);
+
+            //Assert
+            $this->assertEquals(1, $result);
+        }
+
     }
 
 
