@@ -74,5 +74,20 @@
             //Assert
             $this->assertEquals(0, $result);
         }
+
+        function test_countRepeats_punctuation()
+        {
+            //Arrange
+            $test_repeatCounter = new RepeatCounter;
+            $word = "enter";
+            $phrase = "please press enter.";
+
+            //Act
+            $result = $test_repeatCounter->countRepeats($word, $phrase);
+
+            //Assert
+            $this->assertEquals(1, $result);
+
+        }
     }
 ?>
