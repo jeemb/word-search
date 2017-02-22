@@ -6,6 +6,7 @@
         $result;
         $word = strtolower($word);
         $phrase = strtolower($phrase);
+        $phrase = trim($phrase, ".?!");
         $matching_words = array();
         $full_words = explode(" ",  $phrase);
 
