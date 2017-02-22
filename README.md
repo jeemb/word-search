@@ -17,6 +17,7 @@ This program searches a user-inputted phrase for a user-inputted word and publis
 |App will only match full words (no partial matches)|word: “is” phrase: “this is a pretty great function” |1|
 |App will search string for word regardless of capitalization |word: “IS” phrase: “this is a pretty cool function”|1|
 |App publishes a value of "0" if no matches exist|word: "is" phrase: "zero"|0|
+|App does not read punctuation at end of string|word:"function" phrase: "this is a pretty cool function."|1|
 
 ## Setup/Installation Requirements
 

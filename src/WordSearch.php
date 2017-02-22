@@ -7,7 +7,7 @@
         $word = strtolower($word);
         $phrase = strtolower($phrase);
         $matching_words = array();
-        $full_words = explode(" ", $phrase);
+        $full_words = explode(" ",  $phrase);
 
         foreach ($full_words as $singleword) {
             if ($singleword === $word) {
